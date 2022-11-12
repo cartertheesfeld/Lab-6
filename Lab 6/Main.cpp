@@ -10,8 +10,8 @@ appropriate headings. There is only one binary number per input line, but an arb
 precede the number.  The program must read the binary numbers one character at a 
 time.  As each character is read, the program multiplies the total decimal value by 2 and 
 adds either a 1 or 0, depending on the input character.  The program should check for 
-bad data; if it encounters anything except a 1 or 0, it should output the message ìBad 
-digit on input.î  The maximum number of spaces that could exist between any two digits 
+bad data; if it encounters anything except a 1 or 0, it should output the message ‚ÄúBad 
+digit on input.‚Äù  The maximum number of spaces that could exist between any two digits 
 of a binary number in the input file will be one, in which case, the binary digit would be 
 considered bad.  The output for this program should be to the screen and not an output 
 file.  In order to read in one character at a time, you will need to use the cin.get 
@@ -38,7 +38,11 @@ void GetBiNum(char bi, int& position, int &startPosition, int count, int dec, if
 //precondition:Get bi num is called and has found the position of 1. 
 //postcondition:The binary number is outputed and checked to see if there are no random characters inserted
 void OutputBi(char& bi, int& count, int& position, int startPosition, int dec, ifstream& inFile, ifstream& inFile2, string inputFileName);
+//precondition: the binary number has be check and outputed
+//postcondition: the decimal equivalent is outputed and all the varibles used to count and oouput the decimal values are cleared
 void Conversion(int startPosition, char& bi, int& dec, int& count, ifstream& inFile, ifstream& inFile2, string inputFileName);
+//precoondition: The value read is bad
+//postcondition: bad digit on input is outputed and the pointer in the file moves to the next line
 void BadDigit(char bi, int& position, int startPosition, int count, int dec, ifstream& inFile, ifstream& inFile2, string inputFileName);
 
 int main()
